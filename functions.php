@@ -120,7 +120,9 @@ add_action( 'widgets_init', 'zuumietheme2018_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zuumietheme2018_scripts() {
-	wp_enqueue_style( 'zuumietheme2018-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrap-style-css', get_template_directory_uri() . '/bootstrap-4.1.3-dist/css/bootstrap.min.css' , '4.1.3','all' );
+
+	wp_enqueue_style( 'zuumietheme2018-style', get_stylesheet_uri() , array('bootstrap-style-css'));
 
 	wp_enqueue_script( 'zuumietheme2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -158,4 +160,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
