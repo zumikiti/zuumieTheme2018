@@ -982,3 +982,16 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+.card-footer {
+	background-color: #fff;
+	border-top: 0px;
+}
+
+.content-card-footer-list,
+.content-card-footer-list a,
+.content-card-footer-list a:hover {
+	font-size: 8px;
+	color: #888;
+	font-weight: 100;
+}
